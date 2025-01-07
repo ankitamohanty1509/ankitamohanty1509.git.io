@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish To-Do List with Delete Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Increase Your Productivity</h1>
+    <h2 class="title"> To-Do List</h2>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('daily')">Daily</button>
+      <button class="tab-btn" onclick="showTab('weekly')">Weekly</button>
+      <button class="tab-btn" onclick="showTab('monthly')">Monthly</button>
+    </div>
+
+    <div class="tab-content" id="daily">
+      <h2>Daily Tasks</h2>
+      <div class="task-input-container">
+        <input type="text" id="daily-input" placeholder="Add a daily task">
+        <button onclick="addTask('daily')">Add Task</button>
+      </div>
+      <ul class="todo-list" id="daily-list"></ul>
+    </div>
+
+    <div class="tab-content" id="weekly" style="display:none;">
+      <h2>Weekly Tasks</h2>
+      <div class="task-input-container">
+        <input type="text" id="weekly-input" placeholder="Add a weekly task">
+        <button onclick="addTask('weekly')">Add Task</button>
+      </div>
+      <ul class="todo-list" id="weekly-list"></ul>
+    </div>
+
+    <div class="tab-content" id="monthly" style="display:none;">
+      <h2>Monthly Tasks</h2>
+      <div class="task-input-container">
+        <input type="text" id="monthly-input" placeholder="Add a monthly task">
+        <button onclick="addTask('monthly')">Add Task</button>
+      </div>
+      <ul class="todo-list" id="monthly-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
